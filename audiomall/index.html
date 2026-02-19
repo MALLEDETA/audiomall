@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LLÍRIA ROMANA - Audioguía</title>
+
+<style>
+body {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    background-color: #f4f1eb;
+    padding: 30px;
+    color: #5a3e2b;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px #fff;
+}
+
+p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+button {
+    display: block;
+    width: 80%;
+    max-width: 300px;
+    margin: 15px auto;
+    padding: 15px;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    background-color: #8c6b4f;
+    color: white;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #6f533d;
+    transform: scale(1.05);
+}
+
+audio {
+    margin-top: 25px;
+    width: 90%;
+}
+</style>
+</head>
+
+<body>
+
+<h1>LLÍRIA ROMANA</h1>
+<p>Selecciona tu idioma para escuchar la audioguía</p>
+
+<button onclick="playAudio('audio-es.mp3')">Español</button>
+<button onclick="playAudio('audio-en.mp3')">English</button>
+<button onclick="playAudio('audio-fr.mp3')">Français</button>
+
+<audio id="player" controls></audio>
+
+<script>
+function playAudio(file) {
+    var player = document.getElementById("player");
+    player.src = file;
+    player.play();
+}
+</script>
+
+</body>
+</html>
